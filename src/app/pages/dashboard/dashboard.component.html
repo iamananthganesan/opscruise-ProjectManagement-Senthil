@@ -1,0 +1,62 @@
+<header class="card-header">
+    <h3>Dashboard</h3>
+</header>
+<section class="row p-l-15">
+    <article class="col-lg-6 white-bg card-wrap mr-10">
+        <h3>Tasks</h3>
+        <div class="m-b-15 wrap">
+            <span>Filter task on Status</span>
+            <p-dropdown placeholder="Select Status" [options]="statusList" [(ngModel)]="status" optionLabel="name"
+                optionValue="ref">
+            </p-dropdown>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <th>Task</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let task of taskList | taskFilter:status">
+                        <td>{{ task?.taskName}}</td>
+                        <td>{{ task?.startDate}}</td>
+                        <td>{{ task?.endDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <DataTableComponent></DataTableComponent> -->
+    </article>
+    <article class="col-lg-5 white-bg card-wrap">
+        <p-chart type="pie" [data]="data" [responsive]="true" height="100%" width="100%"></p-chart>
+    </article>
+</section>
+<section class="row p-l-15">
+    <article class="col-lg-6 white-bg card-wrap">
+        <h3>Performance</h3>
+        <div class="m-b-15 wrap">
+            <span>Filter task assign to</span>
+            <p-dropdown placeholder="Select Resource" [options]="resourceList" [(ngModel)]="selectedResource">
+            </p-dropdown>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <th>Task</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let task of taskList | taskFilter:selectedResource">
+                        <td>{{ task?.taskName}}</td>
+                        <td>{{ task?.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <DataTableComponent></DataTableComponent> -->
+    </article>
+</section>

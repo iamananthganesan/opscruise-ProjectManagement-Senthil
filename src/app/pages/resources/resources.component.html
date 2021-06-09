@@ -1,0 +1,61 @@
+<header class="card-header">
+    <h3>Resources</h3>
+    <p>List of Resources</p>
+</header>
+<article class="white-bg card-wrap"> 
+    <div class="group">  
+    <p-button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Add new Resource"></p-button>   
+</div>
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let resource of resourceList">
+                    <td>{{ resource?.resourceName}}</td>
+                    <td>{{ resource?.resourceEmail}}</td>
+                    <td>{{ resource?.resourceStatus}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p-dialog header="Add Resource" [(visible)]="displayResourceDialog" [style]="{width: '50vw'}" [baseZIndex]="10000">
+        <div>
+            <ng-template pTemplate="header">
+                Header content here
+            </ng-template>
+            <form [formGroup]="resourceaddDetailsForm">
+                <div class="form-group">
+                    <span class="p-float-label">
+                        <input formControlName="resourceName" id="float-input" type="text" pInputText> 
+                        <label for="float-input">Resource Name</label>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span class="p-float-label">
+                        <input formControlName="resourceEmail" id="float-input" type="text" pInputText> 
+                        <label for="float-input">Resource Email</label>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span class="p-float-label">
+                        <p-dropdown placeholder="Select Status" [options]="statusList" formControlName="resourceStatus" dataKey="id" optionValue="itemName" optionLabel="itemName"></p-dropdown>
+                        <!-- <label for="float-input">Resource status</label> -->
+                    </span>
+                </div>
+                <div class="form-group">
+                    <p-button type="button" (click)="addResource()" icon="pi pi-info-circle" label="Add new Resource"></p-button>   
+                </div>
+            </form>
+            <p-footer>
+                <hr>
+            </p-footer>
+        </div>
+    </p-dialog>
+     <p-toast position="top-right"></p-toast> 
+</article>

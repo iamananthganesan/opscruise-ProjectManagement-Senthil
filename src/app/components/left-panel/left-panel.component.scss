@@ -1,0 +1,39 @@
+.leftPanel{
+    background-color:#37424a;
+    color: #f2f2f2;
+    min-height: 100%;
+    .leftpanel-header{
+        h3{
+            font-size: 24px;
+        }
+        padding: 20px;
+        align-items: center;
+        .leftpanel-wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            i{
+                padding: 15px;
+                font-size: 32px;
+            }
+            span{
+                flex-direction: column;
+            }
+        }
+    }
+    .list-group-item{
+        background-color: #37424a;
+        padding: 15px 10px;
+        color: #f2f2f2;
+        font-size: 18px;
+        &:hover{
+            cursor: pointer;
+            color: brown;
+            background-color: #f2f2f2;
+            border-left: 5px solid brown ;
+        }
+        // &:after{
+
+        // }
+    }
+}

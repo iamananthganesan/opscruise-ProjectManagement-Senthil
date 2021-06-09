@@ -1,0 +1,88 @@
+{
+  "tasksData": [
+    {
+      "taskName": "Dashboard Screen",
+      "startDate": "12/6/2021",
+      "endDate": "18/6/2021",
+      "status": "pending",
+      "taskId": 1,
+      "resourceName": "Anand"
+    },
+    {
+      "taskName": "Resource Screen",
+      "startDate": "22/6/2021",
+      "endDate": "28/6/2021",
+      "status": "inprogress",
+      "resourceName": "Magesh",
+      "taskId": 2
+    },
+    {
+      "taskName": "Task Screen",
+      "startDate": "2/6/2021",
+      "endDate": "5/6/2021",
+      "status": "completed",
+      "resourceName": "Senthil",
+      "taskId": 3
+    },
+    {
+      "taskName": "User Screen",
+      "startDate": "5/6/2021",
+      "endDate": "6/6/2021",
+      "status": "completed",
+      "resourceName": "Senthil",
+      "taskId": 3
+    },
+    {
+      "taskName": "Endpoints Screen",
+      "startDate": "15/6/2021",
+      "endDate": "16/6/2021",
+      "status": "in progress",
+      "resourceName": "Senthil",
+      "taskId": 3
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Senthil",
+      "resourceEmail": "sentil@gmail.com",
+      "resourceStatus": "available",
+      "id": 1
+    },
+    {
+      "resourceName": "Anand",
+      "resourceEmail": "anand@gmail.com",
+      "resourceStatus": "available",
+      "id": 2
+    },
+    {
+      "resourceName": "Ganesan",
+      "resourceEmail": "ganesan@gmail.com",
+      "resourceStatus": "available",
+      "id": 3
+    },
+    {
+      "resourceName": "Jack ryan",
+      "resourceEmail": "jack@gmail.com",
+      "resourceStatus": "available",
+      "id": 4
+    },
+    {
+      "resourceName": "Magesh",
+      "resourceEmail": "magesh@gmail.com",
+      "resourceStatus": "unavailable",
+      "id": 5
+    },
+    {
+      "resourceName": "yoo",
+      "resourceEmail": "yo@gmail.com",
+      "resourceStatus": "available",
+      "id": 7
+    },
+    {
+      "resourceName": "Test User",
+      "resourceEmail": "test@gmail.com",
+      "resourceStatus": "unavailable",
+      "id": 8
+    }
+  ]
+}
